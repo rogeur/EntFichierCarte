@@ -1,4 +1,5 @@
 
+
 custompanel minehome2345
 
 maxgputemp 85
@@ -8,8 +9,9 @@ globaldriver amdgpu
 autoreboot true
 #             570  580  570  570  580  580
 cor 2797c4 1050 1150 1050 1050 1150 1150
-mem 2797c4 2000 2250 2000 2000 2250 2250
-pwr 2797c4 120 110 120 120 110 110
+mem 2797c4 2200 2250 2200 2200 2250 2250
+pwr 2797c4 125 112 125 125 112 112
+vlt 2797c4 880 0 880 880 0 0 
 flags --cl-global-work 8192 --farm-recheck 200
 globalpowertune 3
 fan 2797c4 65 70 70 65 70 50
@@ -212,6 +214,3 @@ fan 2797c4 65 70 70 65 70 50
 #
 # You are able to reboot remotely. Start with "1" (no quotes) to reboot a rig.
 # Then, if you want to reboot again, increment it to 2, then 3, then 4, etc etc (never skip any numbers).
-
-
-
