@@ -9,7 +9,7 @@ globaldriver amdgpu
 autoreboot true
 #             580  580  580  580
 cor 2797c4 1150 1150 1150 1150
-mem 2797c4 2250 2250 2250 2250
+mem 2797c4 2300 2300 2300 2300
 pwr 2797c4 112 112 112 112
 #vlt 2797c4 880 0 880 880 0 0 
 flags --cl-global-work 8192 --farm-recheck 200
