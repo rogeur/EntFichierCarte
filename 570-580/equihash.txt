@@ -1,18 +1,19 @@
 
+
 custompanel minehome2345
 
 maxgputemp 85
-globalminer claymore-zcash
+globalminer claymore
 stratumproxy enabled
 globaldriver amdgpu
 autoreboot true
-
-#      	   570  580  570  570  580  580
-cor 2797c4 1050 1100 1050 1050 1100 1100 
-mem 2797c4 2000 2250 2000 2000 2250 2250
-pwr 2797c4 120 110 120 120 110 110 
+#             570  580  570  570  580  580
+cor 2797c4 1050 1150 1050 1050 1150 1150
+mem 2797c4 2200 2250 2200 2200 2250 2250
+pwr 2797c4 125 112 125 125 112 112
+vlt 2797c4 880 0 880 880 0 0 
 flags --cl-global-work 8192 --farm-recheck 200
-#globalpowertune 3
+globalpowertune 3
 fan 2797c4 65 70 70 65 70 50
 
 # ethOS Pool: ethosdistro.com/pool
@@ -29,7 +30,7 @@ fan 2797c4 65 70 70 65 70 50
 # WARNING: Using apt-get to upgrade, update, and/or install packages is unsupported and will likely break ethOS.
 #
 # GLOBAL CONFIG SETTINGS THAT APPLY TO ALL RIGS
-# SAMPLE FORMAT: 
+# SAMPLE FORMAT:
 # [type] [value]
 # ------------------------------------------------------
 # globalminer ethminer
@@ -40,7 +41,7 @@ fan 2797c4 65 70 70 65 70 50
 # proxypool2 us2.ethermine.org:4444
 # poolpass1 x
 # poolpass2 x
-# poolemail name@example.com 
+# poolemail name@example.com
 # flags --cl-global-work 8192 --farm-recheck 200
 # globalcore 1000
 # globalmem 1250
@@ -56,16 +57,16 @@ fan 2797c4 65 70 70 65 70 50
 # EXPLANATION OF SETTINGS THAT APPLY TO ALL RIGS
 # If using "pool" parameter, write WORKER (a placeholder variable) in place of rig name (i.e. NOT rig1, myrig, home, warehouse2, etc).
 #
-# globalminer:		set global miner (ethminer sgminer-gm claymore claymore-zcash optiminer-zcash sgminer-gm-xmr cgminer-skein ewbf-zcash dstm-zcash ccminer)  
-# 			NOTE: ewbf-zcash, dstm-zcash and ccminer (xmr, and others) is for nvidia; for ccminer flags, see http://ethosdistro.com/ccminer.txt )
+# globalminer:        set global miner (ethminer sgminer-gm claymore claymore-zcash optiminer-zcash sgminer-gm-xmr cgminer-skein ewbf-zcash dstm-zcash ccminer)
+#             NOTE: ewbf-zcash, dstm-zcash and ccminer (xmr, and others) is for nvidia; for ccminer flags, see http://ethosdistro.com/ccminer.txt )
 # maxgputemp:           the temperature in C that your GPUs will trigger the miner to turn off
 # stratumproxy:         enabled/disabled/miner/nicehash (enabled by default; disabled: pool option, nicehash: nicehash support, miner: internal miner proxy)
 # proxywallet:          the address to which this rig's proxy will mine (only used if stratumproxy is not disabled)
 # proxypool1:           stratum proxy's first pool (only used if stratumproxy is not disabled)
 # proxypool2:           stratum proxy's failover pool (only used if stratumproxy is not disabled)
-# poolpass1:		password for first pool (not used for most pools)
-# poolpass2:		password for failover pool (not used for most pools)
-# poolemail:		use only with pools that accepts emails for alerts (nanopool, etc); it might cause some other pools not to work
+# poolpass1:        password for first pool (not used for most pools)
+# poolpass2:        password for failover pool (not used for most pools)
+# poolemail:        use only with pools that accepts emails for alerts (nanopool, etc); it might cause some other pools not to work
 # flags:                set desired flags here, the defaults are known good working
 # globalcore:           set the global core clock of all GPUs
 # globalmem:            set the global mem clock of all GPUs
@@ -73,16 +74,16 @@ fan 2797c4 65 70 70 65 70 50
 # globalpowertune:      set the power tune setting of all GPUs (r9 290/x/390/x should use 50; RX should use 4-7 depending on overclock; for nvidia, this is watt limit)
 # autoreboot:           set to a number (autoreboot 3), allow rigs to autoreboot if they soft crash (max of 3 reboots, run clear-thermals to reset counter)
 # custompanel:          set ethosdistro.com panel ID, exactly 12 characters, first 6 is your preferred panel ID, last 6 is your private key
-# lockscreen:		lock the ethOS desktop upon boot
-# globaldesktop:	login prompt user/pass is ethos/live, set ethOS to headless mode by setting like "globaldesktop disabled" (only works for RX/AMDGPU)
-# globalname:		set ethOS not to use worker name (useful for pools that do not allow worker names)
+# lockscreen:        lock the ethOS desktop upon boot
+# globaldesktop:    login prompt user/pass is ethos/live, set ethOS to headless mode by setting like "globaldesktop disabled" (only works for RX/AMDGPU)
+# globalname:        set ethOS not to use worker name (useful for pools that do not allow worker names)
 # pool:                 only used with stratumproxy disabled, use this if you have a network proxy or getwork pool (example: http://pool.com:port/WORKER )
 #
 # PER-RIG STYLE CONFIG SETTINGS THAT APPLY TO INDIVIDUAL RIGS (AND THEIR RESPECTIVE INDIVIDUAL GPUS)
 # NOTICE: c94e13 is a SAMPLE rig/[worker]/hostname, change it to the rig/[worker]/hostname of YOUR RIG
 # NOTICE: Your rig/[worker]/hostname names are assigned automatically by the OS, do not change them
 #
-# SAMPLE FORMAT: 
+# SAMPLE FORMAT:
 # [type] [worker] [gpu0 value] [gpu1 value] [gpu2 value] [gpu3 value] [gpu4 value]
 # ------------------------------------------------------
 # cor c94e13 950 1000 1050 1025 980
@@ -92,7 +93,7 @@ fan 2797c4 65 70 70 65 70 50
 # vlt c94e13 0 1118 0 0 1118
 # ------------------------------------------------------
 #
-# SAMPLE FORMAT: 
+# SAMPLE FORMAT:
 # [type] [worker] [value]
 # ------------------------------------------------------
 # miner c94e13 ethminer
@@ -101,10 +102,10 @@ fan 2797c4 65 70 70 65 70 50
 # reb c94e13 1
 # loc c94e13 d3
 # sel c94e13 1 2 4
-# off c94e13 
+# off c94e13
 # wallet c94e13 0x0bdC4F12fB57d3acA9C3cF72B7AA2789A20d27f2
 # rigpool1 c94e13 pool-usa.ethosdistro.com:5001
-# rigpool2 c94e13 pool-eu.ethosdistro.com:5001 
+# rigpool2 c94e13 pool-eu.ethosdistro.com:5001
 # rigpoolpass1 c94e13 x
 # rigpoolpass2 c94e13 x
 # driverless c94e13 enabled
@@ -139,7 +140,7 @@ fan 2797c4 65 70 70 65 70 50
 # ONLY USEFUL IF USING REMOTE CONFIG
 # NOTICE: 113-C6711101-100 is a SAMPLE GPU bios name, change it to the GPU bios name of YOUR GPU
 # NOTICE: For a list of GPU bioses, click the "GPU bioses" link in your ethosdistro.com stats panel
-# 
+#
 # SAMPLE FORMAT:
 # [type] [bios name] [value]
 # ------------------------------------------------------
@@ -174,7 +175,7 @@ fan 2797c4 65 70 70 65 70 50
 # SAMPLE FORMAT:
 # [miner]=[parameter] value
 # ------------------------------------------------------
-# claymore-zcash=proxypool1 zec-us-west1.nanopool.org:6666                                                
+# claymore-zcash=proxypool1 zec-us-west1.nanopool.org:6666
 # claymore-zcash=proxypool2 zec-us-east1.nanopool.org:6666
 # claymore-zcash=proxywallet t1XQgP5zCG8C3vMhCsDnwUkMnEtnJEqj5NK
 # claymore-zcash=poolpass1 x
@@ -191,8 +192,8 @@ fan 2797c4 65 70 70 65 70 50
 # SAMPLE XMR CONFIG (note: the wallet and payment id is long, there are no line breaks)
 # -------------------------------------------------------
 # globalminer sgminer-gm-xmr
-# sgminer-gm-xmr=proxypool1 xmr-usa.dwarfpool.com:8100 
-# sgminer-gm-xmr=proxypool2 xmr-eu.dwarfpool.com:8050 
+# sgminer-gm-xmr=proxypool1 xmr-usa.dwarfpool.com:8100
+# sgminer-gm-xmr=proxypool2 xmr-eu.dwarfpool.com:8050
 # sgminer-gm-xmr=proxywallet 47sghzufGhJJDQEbScMCwVBimTuq6L5JiRixD8VeGbpjCTA12noXmi4ZyBZLc99e66NtnKff34fHsGRoyZk3ES1s1V4QVcB.1025069329a4ae653c8a2bcde9302ab0eedee29d0e9ff2a144cea5951a47f81c
 # sgminer-gm-xmr=poolpass1 x
 # sgminer-gm-xmr=poolpass2 x
