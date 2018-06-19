@@ -3,7 +3,7 @@
 custompanel minehome2345
 
 maxgputemp 85
-globalminer claymore
+globalminer claymore-zcash
 stratumproxy enabled
 globaldriver amdgpu
 autoreboot true
