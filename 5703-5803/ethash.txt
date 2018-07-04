@@ -4,16 +4,18 @@ custompanel minehome2345
 
 maxgputemp 85
 globalminer claymore
-stratumproxy enabled
-globaldriver amdgpu
+stratumproxy miner
+safevolt disabled
+#globaldriver amdgpu
 autoreboot true
-#             570  580  570  570  580  580
-cor 2797c4 1050 1150 1050 1050 1150 1150
-mem 2797c4 2200 2300 2200 2200 2300 2300
-pwr 2797c4 120 112 120 120 112 112
-vlt 2797c4 880 0 880 880 0 0 
+
+#	   580  570  580  570  570  580
+cor 2797c4 1150 1050 1150 1050 1050 1150
+mem 2797c4 2300 2200 2300 2200 2200 2300
+#pwr 2797c4 120 112 120 120 112 112
+vlt 2797c4 850 880 850 880 880 850 
 flags --cl-global-work 8192 --farm-recheck 200
-globalpowertune 3
+#globalpowertune 3
 fan 2797c4 65 70 70 65 70 50
 
 # ethOS Pool: ethosdistro.com/pool
