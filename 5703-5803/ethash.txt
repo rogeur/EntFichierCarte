@@ -10,10 +10,17 @@ safevolt disabled
 autoreboot true
 
 #          580  570  570  580  570 580 
+<<<<<<< Updated upstream
 cor 2797c4 1150 1050 0 1150 1050 1150
 mem 2797c4 2300 2200 0 2300 2200 2300
 #pwr 2797c4 120 112 120 120 112 112
 vlt 2797c4 850 810 0 850 810 850 
+=======
+cor 2797c4 1150 1050 1050 1150 1050 1150
+mem 2797c4 2300 2200 2100 2300 2200 2300
+#pwr 2797c4 120 112 120 120 112 112
+vlt 2797c4 860 830 830 860 830 860 
+>>>>>>> Stashed changes
 flags --cl-global-work 8192 --farm-recheck 200
 #globalpowertune 3
 fan 2797c4 65 70 70 65 70 50
